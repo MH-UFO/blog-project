@@ -1,0 +1,31 @@
+<%- include('partials/header.ejs') %>
+  <main class="main-blog">
+    <% if (locals.show===true) { %>
+      <% for (let i=0; i < locals.title.length; i++) { %>
+        <div class="blog">
+          <h2 class="blog-title">
+            <%= locals.title[i] %>
+          </h2>
+          <p class="blog-text">
+            <%= locals.text[i].slice(0 , 99) %>
+          </p>
+          <p class="blog-author">Author: <%=locals.author[i] %>
+          </p>
+          <div class="blog-actions">
+            <a class="blog-link" href="/post/<%= locals.id[i]%>">Read More</a>
+            <div class="edit-delete-group">
+              <form method="get">
+                  <button class="edit-blog" type="submit" formaction="/patch/<%= locals.id[i]%>">Edit</button>
+                  <button class="delete-blog" type="submit" formaction="/delete/<%= locals.id[i]%>" onclick="return confirm('Are you sure you want to delete this post?');">DELETE</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <% } %>
+          <% } %>
+          <%if(!locals.title){ %>
+            <p class="no-blog">There's no blog here.Click on <a href="/compose">compose</a> to add yours</p>
+            <%}%>
+  </main>
+
+  <%- include('partials/footer.ejs') %>

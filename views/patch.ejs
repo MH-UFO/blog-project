@@ -1,0 +1,18 @@
+<%- include('partials/header.ejs') %>
+
+    <div class="page-wrapper">
+        <div class="content-box">
+            <h1 class="page-title">Edit</h1>
+            <form method="post" action="/patchData/<%= locals.id %>?_method=PATCH" class="compose-form">
+                <p>Title</p>
+                <input type="text" name="title" value="<%= locals.title%>" required>
+                <p>Article</p>
+                <textarea name="article" required autocomplete="off"><%=locals.article %></textarea>
+                <p>Author</p>
+                <input type="text" name="author" value="<%=locals.author %>" required>
+                <button type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+
+    <%- include('partials/footer.ejs') %>
