@@ -16,7 +16,6 @@ A beautiful , simple and responsive blog website built by Mohammad Hosein Khajeh
 - CSS
 - JavaScript
 - node.js
-- npm modules(express , body-parser , ejs)
 - PostgresSQL
 
 ## Installation
