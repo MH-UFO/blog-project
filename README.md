@@ -33,4 +33,10 @@ CREATE TABLE blogs(
 ```
 - npm start
 - Go to localhost:3000
-- 
+
+## Screen Shot
+
+![Screenshot](./public/screenshots/Screenshot%202025-09-01%20111528.png)
+![Screenshot](./public/screenshots/Screenshot%202025-09-01%20111609.png)
+![Screenshot](./public/screenshots/Screenshot%202025-09-01%20111627.png)
+![Screenshot](./public/screenshots/Screenshot%202025-09-01%20111650.png)
